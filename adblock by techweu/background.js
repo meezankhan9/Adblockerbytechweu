@@ -1,4 +1,4 @@
-const defaultFilters = [
+const Filters = [
 	"*://*.doubleclick.net/*",
 	"*://partner.googleadservices.com/*",
 	"*://*.googlesyndication.com/*",
@@ -13,7 +13,7 @@ const defaultFilters = [
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) { return { cancel: true }},
-    { urls: defaultFilters },
+    { urls: Filters },
     ["blocking"]
 )
 
